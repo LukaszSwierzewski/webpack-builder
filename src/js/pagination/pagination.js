@@ -6,7 +6,7 @@ function hideAnother() {
 
 function deleteActiveCLass() {
   document.querySelectorAll("a").forEach((e) => {
-    e.classList.remove("active");
+    e.parentNode.classList.remove("active");
   });
 }
 
@@ -15,7 +15,7 @@ function pagination() {
   pages.forEach((e) => {
     e.addEventListener("click", () => {
       deleteActiveCLass();
-      e.classList.add("active");
+      e.parentNode.classList.add("active");
       hideAnother();
       let number = e.innerHTML * 10;
       let limit = number + 20;

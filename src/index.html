@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
 
   <body>
@@ -74,16 +74,18 @@
             <a>15</a>
           </li>
         </ul>
-        <table id="dataTable">
-          <tr class="main">
-            <th>ID</th>
-            <th>Name</th>
-            <th>City</th>
-            <th>Total income</th>
-            <th>Average income</th>
-            <th id="lastMonth">Last month income</th>
-          </tr>
-        </table>
+        <div class="tab">
+          <table id="dataTable">
+            <tr class="main">
+              <th>ID</th>
+              <th>Name</th>
+              <th>City</th>
+              <th>Total income</th>
+              <th>Average income</th>
+              <th id="lastMonth">Last month income</th>
+            </tr>
+          </table>
+        </div>
       </div>
     </div>
   </body>
@@ -101,11 +103,6 @@
     text-align: left;
     padding: 8px;
   }
-
-  tr:nth-child(even) {
-    background-color: #dddddd;
-  }
-
   th {
     cursor: pointer;
   }
@@ -154,7 +151,7 @@
   }
 
   .pagination li a {
-    padding: 0.5rem;
+    padding: 0.2rem;
     cursor: pointer;
   }
 
@@ -183,6 +180,8 @@
     margin-top: 50px;
     padding: 10px 20px;
     width: 200px;
+    border: 1px solid #333;
+    text-align: center;
   }
 
   tr:hover {
@@ -191,6 +190,7 @@
 
   #clean {
     padding: 0px;
+    width: 240px;
   }
 
   #clean {
@@ -210,15 +210,32 @@
 
   .pagination {
     padding: 0px;
+    margin: 10px 0px 0px 0px;
+    text-align: center;
   }
-
+  .pagination li {
+    border: 1px solid #dddddd;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
   .main:hover {
     background-color: transparent !important;
   }
 
   .container {
     margin: 0 auto;
-    max-width: 1080px;
-    min-width: 600px;
+    max-width: 1200px;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+  }
+  #lastMonth {
+    width: 100px;
+  }
+  .tab {
+    overflow-x: auto;
   }
 </style>

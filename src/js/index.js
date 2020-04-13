@@ -45,7 +45,6 @@ const getData = async () => {
     `;
     DOM.table.insertAdjacentHTML("beforeend", loader);
   });
-
   document.querySelector(".dataSet").style.display = "block";
   document.querySelector(".loading").style.display = "none";
 };
